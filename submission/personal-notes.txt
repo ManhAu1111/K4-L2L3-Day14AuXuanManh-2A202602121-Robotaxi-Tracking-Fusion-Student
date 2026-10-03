@@ -2,34 +2,37 @@ PHIẾU CÁ NHÂN — DAY 14
 Điền file này, chạy QC vào submission/qc-j01 và submission/qc-practice, commit rồi nộp link repo.
 Không dán ảnh, toạ độ điểm hay nội dung file export vào đây.
 
-Họ tên / mã học viên:
-Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01:
-Phiên bản CVAT / overlay đã bật (có/không):
+Họ tên / mã học viên: Âu Xuân Mạnh / 2A202602121
+Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01: J01-b / Track ID 1
+Phiên bản CVAT / overlay đã bật (có/không): CVAT v2.74.1 / Có (overlay: on)
 
 J01 — TRACK LÕI
-Frame fit và lý do:
-L / W / H (m):
-Keyframe quan trọng và lý do:
-Đã bấm F qua đủ frame 0–65 (có/không):
-Đoạn thưa / che khuất / dễ nhầm identity:
+Frame fit và lý do: Frame 38 (cụm điểm dày, rõ ranh giới hình học xe và nằm gần vùng ROI gợi ý)
+L / W / H (m): 4.5 / 1.9 / 1.6
+Keyframe quan trọng và lý do: Frame 0, 38, 65 (đầu, cuối và các mốc chuyển hướng/thay đổi tâm)
+Đã bấm F qua đủ frame 0–65 (có/không): Có
+Đoạn thưa / che khuất / dễ nhầm identity: Các frame ở xa (0-10 và 55-65) điểm thưa hơn nhưng vẫn giữ nguyên kích thước tham chiếu L/W/H.
 
 SELF-QC (từ qc_tracks.csv / qc_flags.csv)
-Lần QC đầu — cờ của track J01 (loại, frame):
-Quyết định cho từng cờ (sửa / giữ vì hợp lệ / chưa đủ evidence) và lý do:
-Đã sửa gì sau QC đầu; QC cuối còn cờ nào:
-Nhận xét của bạn cùng cặp và bạn đồng ý/không đồng ý vì sao:
+Lần QC đầu — cờ của track J01 (loại, frame): Không có cờ lỗi nào (0 flags)
+Quyết định cho từng cờ (sửa / giữ vì hợp lệ / chưa đủ evidence) và lý do: Giữ nguyên vì track liền mạch 66 frame, không drift kích thước.
+Đã sửa gì sau QC đầu; QC cuối còn cờ nào: QC cuối 0 cờ lỗi, L_drift = 0.0%.
+Nhận xét của bạn cùng cặp và bạn đồng ý/không đồng ý vì sao: Đồng ý với nhận xét track ôm sát vật thể và overlay chiếu chính xác.
 
 CAMERA–LIDAR (overlay trên image_1)
-Ca bình thường (frame / quan sát):
-Ca khó (frame / quan sát 2D / quan sát 3D):
-Giả thuyết nguyên nhân (annotation / FOV / occlusion / sparse / nghi calibration / chưa đủ evidence):
-Hành động (sửa / giữ / báo Lab Coach) và lý do:
+Ca bình thường (frame / quan sát): Frame 38 — Khung overlay màu đỏ chiếu vừa khít chiếc xe ở làn phải ngoài cùng.
+Ca khó (frame / quan sát 2D / quan sát 3D): Frame 60 — Xe ở xa, điểm thưa nhưng overlay vẫn bao trọn khung xe trên camera image_1.
+Giả thuyết nguyên nhân (annotation / FOV / occlusion / sparse / nghi calibration / chưa đủ evidence): Annotation chuẩn, calibration chuẩn.
+Hành động (sửa / giữ / báo Lab Coach) và lý do: Giữ nhãn vì khung hình học 3D và 2D đối chiếu khớp.
 
 CASE NGẮN (task practice)
-Case → track ID (ví dụ B01 → 3):
-Case đã xong:
-Case đang dở / chỗ kẹt:
-fragmentation_suspect ở đầu/cuối case đã kiểm là do cách cắt case (có/không):
+Case → track ID (ví dụ B01 → 3): B01 → Track ID 1
+Case đã xong: B01
+Case đang dở / chỗ kẹt: Không
+fragmentation_suspect ở đầu/cuối case đã kiểm là do cách cắt case (có/không): Có
 
 THỜI GIAN
-J01 / case ngắn / QC và fusion:
+J01 / case ngắn / QC và fusion: 60 phút / 15 phút / 15 phút
+
+Ghi chú thêm:
+Tôi thực hiện gán nhãn 1 phương tiện là xe J01-b theo đúng yêu cầu bài Lab.
